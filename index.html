@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>蓝车赛车沙盒 · MVP</title></head>
+<body><div id="app">
+  <div id="scene"></div>
+  <div class="topbar"><span class="test-label">TEST <small>BLUE KART / MVP</small></span><span class="top-help">L 爆发　|　T 重置　|　H 帮助</span></div>
+  <aside class="telemetry" aria-label="赛车状态">
+    <div class="stat"><span>SPEED</span><strong id="speed">0.0 <small>u/s</small></strong></div>
+    <div class="stat"><span>THROTTLE</span><strong id="throttle">OFF</strong></div>
+    <div class="stat"><span>STEERING</span><strong id="steering">+0.00</strong></div>
+    <div class="steering-track"><i id="steering-dot"></i></div><div class="divider"></div>
+    <div class="stat"><span>DRIFT</span><strong id="drift">OFF</strong></div>
+    <div class="stat"><span>CHANGE</span><strong id="change">0.00</strong></div><div class="divider"></div>
+    <div class="stat"><span>BOOST</span><strong id="boost">0.00 s</strong></div>
+    <div class="stat"><span>ALTITUDE</span><strong id="altitude">0.0 m</strong></div>
+    <div class="stat"><span>HANDBRAKE</span><strong id="handbrake">STOWED</strong></div>
+    <div class="tick">60 Hz - 16.7ms</div>
+  </aside>
+  <div id="message" class="message">W / ↑ 沿路前进 · A / D 在车道内移动 · 空格漂移</div>
+  <div class="footer-left"><span>v0.1.0</span><span id="fps">60 FPS</span><span id="distance">0.00 km</span><span id="checkpoint">0 checkpoints</span></div>
+  <div class="footer-right"><button data-action="reset">R 重置</button><button data-action="camera">C 镜头</button><button data-action="pause">P 暂停</button><button data-action="fullscreen">F 全屏</button></div>
+  <div id="help" class="help hidden" role="dialog" aria-label="游戏帮助"><div class="help-card"><button class="close" data-action="help">×</button><h1>蓝车赛车沙盒</h1><p>按油门会自动沿道路前进；左右键可在车道内移动，道路边缘有隐形墙。经过发光标记可记录检查点。</p><div class="help-grid"><span>↑ / W</span><span>沿道路前进</span><span>↓ / S</span><span>刹车 / 倒车</span><span>← → / A D</span><span>车道内左右移动</span><span>空格</span><span>快速侧移</span><span>Shift / L</span><span>短时加速</span><span>J</span><span>跳跃</span><span>C / P / R / F</span><span>镜头 / 暂停 / 重置 / 全屏</span></div><p class="tip">按 H 关闭帮助</p></div></div>
+  <div class="mobile-controls"><div><button data-hold="left">◀</button><button data-hold="right">▶</button></div><div><button data-hold="brake">刹车</button><button data-hold="gas">油门</button></div></div>
+</div><script type="module" src="/src/main.js"></script></body></html>
